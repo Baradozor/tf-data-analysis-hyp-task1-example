@@ -8,8 +8,6 @@ def solution(x_success: int,
              x_cnt: int, 
              y_success: int, 
              y_cnt: int) -> bool:
-    alpha = 0.06
-    _, p_value = proportions_ztest(
-        [x_success, y_success], [x_cnt, y_cnt], alternative="smaller"
-    )
-    return p_value <= alpha # Ваш ответ, True или False
+  alpha = 0.06
+  _, p_value = proportions_ztest([x_success, y_success], [x_cnt, y_cnt], alternative="smaller")
+  return p_value <= alpha
